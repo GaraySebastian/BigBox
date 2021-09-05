@@ -1,13 +1,14 @@
-from django.urls import path, include
+from .views import CategoryList, BoxList, ActivityList, CategoryDetail, BoxDetail, ActivityDetail
+from django.urls import path
 from core import views
-from rest_framework.routers import DefaultRouter
 
-router = DefaultRouter()
-router.register('categories', views.CategorySerializerViewSet)
-router.register('boxes', views.BoxSerializerViewSet)
-router.register('activities', views.ActivitySerializerViewSet)
 
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('categories/', CategoryList.as_view()),
+    path('categories/<str:pk>/', CategoryDetail.as_view()),
+    path('boxes/', BoxList.as_view()),
+    path('boxes/<str:pk>/', BoxDetail.as_view()),
+    path('activities/', ActivityList.as_view()),
+    path('activities/<str:pk>/', ActivityDetail.as_view()),
 ]
