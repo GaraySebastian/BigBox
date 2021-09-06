@@ -19,7 +19,7 @@ class BoxImageResource(resources.ModelResource):
 		model = models.BoxImage
 
 class BoxImageAdmin(ImportExportModelAdmin,admin.ModelAdmin):
-	search_fields = ['name']
+	search_fields = ['id']
 	list_display = ['id', 'box']
 	resource_class = BoxImageResource
 
@@ -42,7 +42,7 @@ class ActivityImageResource(resources.ModelResource):
 		model = models.ActivityImage
 
 class ActivityImageAdmin(ImportExportModelAdmin,admin.ModelAdmin):
-	search_fields = ['name']
+	search_fields = ['id']
 	list_display = ['id', 'activity']
 	resource_class = ActivityImageResource
 
