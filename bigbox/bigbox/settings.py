@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'core',
     'rest_framework',
     'django_filters',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -79,8 +80,8 @@ WSGI_APPLICATION = 'bigbox.wsgi.application'
 
 #DATABASES = {
 #    'default': {
-#       'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#        'NAME': 'box',
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'bigbox',
 #        'USER': 'postgres',
 #        'PASSWORD': '1234',
 #        'HOST': '127.0.0.1',
