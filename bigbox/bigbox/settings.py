@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 import django_heroku
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -92,10 +93,10 @@ WSGI_APPLICATION = 'bigbox.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd773nmh2fa87q8',
-        'USER': 'oawrbtkfwcoulw',
-        'PASSWORD': '2d22cafec5a47f919f4b4471c05575ed1565ae9241bd871ddaa967088bf20a55',
-        'HOST': 'ec2-44-198-24-0.compute-1.amazonaws.com',
+        'NAME': 'db6307jg5culu2',
+        'USER': 'uquckdkaxwtkae',
+        'PASSWORD': 'f7f38a2adfb4902e67f8f0258f98a2415c71673b72f079b62310117ab1bcd3c7',
+        'HOST': 'ec2-44-198-80-194.compute-1.amazonaws.com',
         'DATABASE_PORT': '5432',
     }
 }
@@ -136,9 +137,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 django_heroku.settings(locals())
+
+
+# Media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
