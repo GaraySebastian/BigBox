@@ -101,8 +101,6 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
+MEDIA_URL = 'https://placeimg.com/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
