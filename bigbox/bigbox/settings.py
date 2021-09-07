@@ -1,16 +1,12 @@
 import os
 import django_heroku
 from pathlib import Path
-from dotenv import load_dotenv
-
-load_dotenv()
-
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'django-insecure-d(*6v(bg_c_sn=7#7*!sn%3j1+ft41@)9)p7ju5p-enlp@u-ue'
 
-DEBUG = os.getenv('DEBUG')
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
